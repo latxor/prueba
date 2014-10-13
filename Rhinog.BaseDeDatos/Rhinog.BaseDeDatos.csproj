@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCCC5C0B-BE7F-459D-98C8-2E5F94CA8DCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rhinog.BaseDeDatos</RootNamespace>
+    <AssemblyName>Rhinog.BaseDeDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Rhinog Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autenticacion\ApplicationDbInitializer.cs" />
+    <Compile Include="Autenticacion\Manager\ApplicationGroupManager.cs" />
+    <Compile Include="Autenticacion\ApplicationGroupMap.cs" />
+    <Compile Include="Autenticacion\ApplicationGroupStore.cs" />
+    <Compile Include="Autenticacion\Manager\ApplicationRoleManager.cs" />
+    <Compile Include="Autenticacion\Manager\ApplicationUserManager.cs" />
+    <Compile Include="Autenticacion\EmailService.cs" />
+    <Compile Include="Autenticacion\GroupStoreBase.cs" />
+    <Compile Include="Autenticacion\Manager\ApplicationSignInManager.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationRoleStore.cs" />
+    <Compile Include="Autenticacion\Model\ApplicactionGroup.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationGroupRole.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationRole.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationUser.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationUserClaim.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationUserGroup.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationUserLogin.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationUserRole.cs" />
+    <Compile Include="Autenticacion\Model\ApplicationUserStore.cs" />
+    <Compile Include="Autenticacion\SmsService.cs" />
+    <Compile Include="Fabrica\rgCargosFabrica.cs" />
+    <Compile Include="Fabrica\rgDepartamentosFabrica.cs" />
+    <Compile Include="Fabrica\rgEmpleadosFabrica.cs" />
+    <Compile Include="Fabrica\rgFestivosFabrica.cs" />
+    <Compile Include="Fabrica\rgGruposFabrica.cs" />
+    <Compile Include="Fabrica\rgRolesFabrica.cs" />
+    <Compile Include="Fabrica\rgTipoDeIdentificacionFabrica.cs" />
+    <Compile Include="Fabrica\rgUsuarioFabrica.cs" />
+    <Compile Include="Interfaces\rgIProcesoBase.cs" />
+    <Compile Include="Interfaces\rgIAutoreferencia.cs" />
+    <Compile Include="Manager\rgDepartamentosManager.cs" />
+    <Compile Include="Manager\rgEmpleadoManager.cs" />
+    <Compile Include="Manager\rgFestivosManager.cs" />
+    <Compile Include="Manager\rgManager.cs" />
+    <Compile Include="Modelo\rgDepartamentoMap.cs" />
+    <Compile Include="Modelo\rgCargoMap.cs" />
+    <Compile Include="Modelo\rgCargos.cs" />
+    <Compile Include="Modelo\rgCategoriasBase.cs" />
+    <Compile Include="Modelo\rgDepartamentos.cs" />
+    <Compile Include="Modelo\rgDireccionMap.cs" />
+    <Compile Include="Modelo\rgEmpleado.cs" />
+    <Compile Include="Modelo\rgEmpleadoMap.cs" />
+    <Compile Include="Modelo\rgEmpresa.cs" />
+    <Compile Include="Modelo\rgEnteMap.cs" />
+    <Compile Include="Modelo\rgFestivos.cs" />
+    <Compile Include="Modelo\rgFestivosMap.cs" />
+    <Compile Include="Modelo\rgModeloBaseMap.cs" />
+    <Compile Include="Manager\rgCargosManager.cs" />
+    <Compile Include="rgManagerBase.cs" />
+    <Compile Include="Fabrica\rgFabricaBase.cs" />
+    <Compile Include="rgFiltro.cs" />
+    <Compile Include="Modelo\rgComplejoBase.cs" />
+    <Compile Include="Modelo\rgContacto.cs" />
+    <Compile Include="Modelo\rgDireccion.cs" />
+    <Compile Include="Modelo\rgEnte.cs" />
+    <Compile Include="rgContexto.cs" />
+    <Compile Include="rgMotorDeBaseDeDatos.cs" />
+    <Compile Include="rgEnumeraciones.cs" />
+    <Compile Include="Interfaces\rgIEstado.cs" />
+    <Compile Include="Modelo\rgModeloBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rgProcGeneral.cs" />
+    <Compile Include="rgTipoIdentificacion.cs" />
+    <Compile Include="rgUtilidadBaseDeDatos.cs" />
+    <Compile Include="VistasModelos\vmConfiguracionRoles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rhinog.Nucleo\Rhinog.Nucleo.csproj">
+      <Project>{fa0b099d-30e8-4b5d-9d9d-59f9e62ae96e}</Project>
+      <Name>Rhinog.Nucleo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
