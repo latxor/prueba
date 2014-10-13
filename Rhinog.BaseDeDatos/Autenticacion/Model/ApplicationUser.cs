@@ -17,7 +17,8 @@ namespace Rhinog.BaseDeDatos
         {
             this.Id = Guid.NewGuid().ToString();
 
-            var prueba = "aaaaa";
+            var prueb0a = "aaaaa";
+            var aaaa = 1;
             // Add any custom User properties/code here
         }
 
